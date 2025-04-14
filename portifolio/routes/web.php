@@ -20,3 +20,8 @@ Route::get('/', function () {
 Route::get('/politica-privacidade', function () {
     return view('politica-privacidade');
 });
+
+Route::get('/app-ads.txt', function () {
+    return response('google.com, pub-3358995556254412, DIRECT, f08c47fec0942fa0')
+        ->header('Content-Type', 'text/plain');
+});
