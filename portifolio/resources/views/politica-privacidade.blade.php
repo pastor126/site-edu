@@ -62,9 +62,9 @@
 <h5>Eduardo C P</h5>
 
 <address>
-Avenida da Praia, 2311, rc, trás
-Esmoriz - Ovar
-CEP: 3885-405
+Rua Guerra Junqueiro, 129
+Ovar
+CEP: 3880-230
 </address>
 
     </body>
