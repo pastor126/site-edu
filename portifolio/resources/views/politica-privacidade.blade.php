@@ -24,7 +24,7 @@
 
 <h5>Coleta de informações de localização em tempo real</h5>
 
-<p>Este aplicativo não faz a coleta de informações de localização em tempo real.</p>
+<p>Apenas o aplicativo Capitain's Logbook faz a coleta de informações de localização em tempo real com uma taxa de atualização de 3 minutos para utilização nas informações do relatório gerado para o próprio usuário.</p>
 
 <h5>Acesso de informações por terceiros</h5>
 
