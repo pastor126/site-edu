@@ -28,3 +28,24 @@ Route::get('/app-ads.txt', function () {
         ->header('Content-Type', 'text/plain')
         ->header('X-Robots-Tag', 'all');
 });
+
+Route::get('/sitemap.xml', function () {
+    $urls = [
+        [
+            'loc' => url('/'),
+            'lastmod' => '2025-08-03',
+            'changefreq' => 'yearly',
+            'priority' => '1.0'
+        ],
+        [
+            'loc' => url('/politica-privacidade'),
+            'lastmod' => '2025-08-03',
+            'changefreq' => 'yearly',
+            'priority' => '0.8'
+        ],
+       
+    ];
+    
+    return response()->view('sitemap', compact('urls'))
+        ->header('Content-Type', 'application/xml');
+});
