@@ -33,13 +33,13 @@ Route::get('/sitemap.xml', function () {
     $urls = [
         [
             'loc' => url('/'),
-            'lastmod' => '2025-08-03',
+            'lastmod' => '2025-12-19',
             'changefreq' => 'yearly',
             'priority' => '1.0'
         ],
         [
             'loc' => url('/politica-privacidade'),
-            'lastmod' => '2025-08-03',
+            'lastmod' => '2025-12-19',
             'changefreq' => 'yearly',
             'priority' => '0.8'
         ],

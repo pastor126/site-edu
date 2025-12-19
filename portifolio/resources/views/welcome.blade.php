@@ -18,24 +18,12 @@
       <h1 id="topo" >EduDevTop</h1>
       <img src="edu.png" id="edu">
       <p>Sou um desenvolvedor que busca desafios para manter o lema "Do alfinete ao foguete!". Desenvolvo aplicações WEB e <a href="#app">APPs</a> personalizados.</p>
-  <div class="max-w-xl mx-auto sm:px-6 lg:px-8">
-    <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet odit voluptates nemo earum voluptas. Eius magni nemo quae neque et amet cupiditate, quaerat delectus numquam, autem voluptatibus! Odio, eveniet eius.</div>
+  
 <h2 id="app">Políticas           
     <p><a href="politica-privacidade">Politica de privacidade para APPs</a></p>
   
 </h2>
 
-<!-- <ul>
-  <li><a href="https://www.youtube.com/watch?v=Rii25-YJZnY" target="_blank">Brahma, Vishnu e Shiva - A app Hindu</a></li>
-  <li><a href="https://www.youtube.com/watch?v=4UClSFEQRO4" target="_blank">Dattatreya</a></li>
-  <li><a href="https://www.mitografias.com.br/2016/07/a-historia-de-krishna/" target="_blank">Krishna</a></li>
-  <li><a href="https://www.youtube.com/watch?v=2PKQUOXn2PA" target="_blank">Hanuman</a></li>
-</ul>
-    </div> -->
-
-    <!-- <div>
-    <a href="Deuses Hindus.html"><img src="Voltar.jpg" id="voltar"></a>
-    </div> -->
   </body>
 </html>
 </html>
