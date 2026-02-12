@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ImageController;
 
 /*
 |--------------------------------------------------------------------------
@@ -20,6 +21,12 @@ Route::get('/', function () {
 Route::get('/politica-privacidade', function () {
     return view('politica-privacidade');
 });
+
+
+// Rotas para upload e visualização da imagem
+Route::get('/image/upload', [ImageController::class, 'upload'])->name('images.upload');
+Route::post('/image/upload', [ImageController::class, 'store'])->name('images.store');
+Route::get('/image/show', [ImageController::class, 'show'])->name('images.show');
 
 
 Route::get('/app-ads.txt', function () {
