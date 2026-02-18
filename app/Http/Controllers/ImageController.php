@@ -4,9 +4,75 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Facades\Hash;
 
 class ImageController extends Controller
 {
+
+    public function checkPassword(Request $request)
+    {
+        $input = $request->password;
+
+        // 🔐 Verifica senha primária (.env)
+        if (Hash::check($input, env('PRIMARY_PASSWORD_HASH'))) {
+            session([
+                'authorized' => true,
+                'role' => 'primary'
+            ]);
+
+            return response()->json([
+                'role' => session('role')
+            ]);
+        }
+        // 🔐 Verifica senha secundária (arquivo)
+        $secondaryPath = storage_path('app/private/secondary_password.txt');
+
+        if (file_exists($secondaryPath)) {
+
+            $storedSecondary = file_get_contents($secondaryPath);
+
+            if (Hash::check($input, $storedSecondary)) {
+                session([
+                    'authorized' => true,
+                    'role' => 'secondary'
+                ]);
+
+                return response()->json([
+                    'role' => session('role')
+                ]);
+            }
+        }
+        return back()->withErrors(['Senha incorreta']);
+    }
+
+    public function updateSecondary(Request $request)
+    {
+        if (session('role') !== 'primary') {
+            abort(403);
+        }
+
+        $request->validate([
+            'new_secondary_password' => 'required|min:4'
+        ]);
+
+        file_put_contents(
+            storage_path('app/private/secondary_password.txt'),
+            Hash::make($request->new_secondary_password)
+        );
+
+        return back()->with('success', 'Senha secundária alterada com sucesso!');
+    }
+
+    // 🔐 Logout
+    public function logout()
+    {
+        session()->forget('authorized');
+        return back();
+    }
+
+
+
+
     // Exibe o formulário de upload
     public function upload()
     {

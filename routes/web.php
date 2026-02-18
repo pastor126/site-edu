@@ -27,6 +27,10 @@ Route::get('/politica-privacidade', function () {
 Route::get('/image/upload', [ImageController::class, 'upload'])->name('images.upload');
 Route::post('/image/upload', [ImageController::class, 'store'])->name('images.store');
 Route::get('/image/show', [ImageController::class, 'show'])->name('images.show');
+Route::post('/login-password', [ImageController::class, 'checkPassword'])->name('login.password');
+Route::post('/update-secondary', [ImageController::class, 'updateSecondary'])->name('update.secondary');
+Route::post('/logout', [ImageController::class, 'logout'])->name('logout');
+
 
 
 Route::get('/app-ads.txt', function () {
