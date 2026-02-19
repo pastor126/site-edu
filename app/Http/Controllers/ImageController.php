@@ -55,6 +55,12 @@ class ImageController extends Controller
             'new_secondary_password' => 'required|min:4'
         ]);
 
+        // Cria o diretório se não existir
+        $privatePath = storage_path('app/private');
+        if (!is_dir($privatePath)) {
+            mkdir($privatePath, 0755, true);
+        }
+
         file_put_contents(
             storage_path('app/private/secondary_password.txt'),
             Hash::make($request->new_secondary_password)
