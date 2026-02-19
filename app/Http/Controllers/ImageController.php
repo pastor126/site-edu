@@ -66,8 +66,11 @@ class ImageController extends Controller
             Hash::make($request->new_secondary_password)
         );
 
-        return back()->with('success', 'Senha secundária alterada com sucesso!');
-    }
+        return response()->json([
+        'success' => true,
+        'message' => 'Senha secundária alterada com sucesso!'
+    ]);
+}
 
     // 🔐 Logout
     public function logout()
