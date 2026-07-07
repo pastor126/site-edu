@@ -62,9 +62,9 @@
 <h5>Eduardo C P</h5>
 
 <address>
-Rua Guerra Junqueiro, 129
+Rua Alexandre Sá Pinto, 41, 1º andar,
 Ovar
-CEP: 3880-230
+CEP: 3880-147
 </address>
 
     </body>
